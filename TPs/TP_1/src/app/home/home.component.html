@@ -1,0 +1,72 @@
+<!-- MENU -->
+<body>
+    <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+    <label for="menu-icon"></label>
+    <nav class="nav"> 		
+        <ul class="pt-5">
+            <li><a [routerLink]="['/quien-soy']">¿Quién soy?</a></li>
+            <li><a [routerLink]="">Estadisticas</a></li>
+            <li><a (click)="this.as.cerrarSesion()">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+<!-- INFO USUARIO -->
+    <div class="section-full-height">
+        <div class="section-title-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center parallax-fade-top">
+                        <p>{{this.as.log.email}}</p>	
+                        <p>puntos: </p>
+                    </div>
+                </div>	
+            </div>
+        </div>
+    </div>
+
+<!-- HOME -->
+    <div class="section-fluid-main">
+        <div class="section-row">
+            <div class="section-col">
+                <div class="section">
+                    <div class="section-in">
+                        <img src="https://assets.codepen.io/1462889/sl1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="hover-text">
+                <h2>Ahorcado</h2>
+            </div>
+            <div class="section-col">
+                <div class="section">
+                    <div class="section-in">
+                        <img src="https://assets.codepen.io/1462889/sl2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="hover-text">
+                <h2>Mayor o Menor</h2>
+            </div>
+            <div class="section-col">
+                <div class="section">
+                    <div class="section-in">
+                        <img src="https://assets.codepen.io/1462889/sl3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="hover-text">
+                <h2>Preguntados</h2>
+            </div>
+            <div class="section-col">
+                <div class="section">
+                    <div class="section-in">
+                        <img src="https://assets.codepen.io/1462889/sl4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="hover-text">
+                <h2>???</h2>
+            </div>
+        </div>
+    </div>
+</body>

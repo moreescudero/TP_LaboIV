@@ -1,0 +1,38 @@
+
+<body>
+<!-- MENU -->
+    <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+    <label for="menu-icon"></label>
+    <nav class="nav"> 		
+        <ul class="pt-5">
+            <li><a [routerLink]="['/home']">Home</a></li>
+            <li><a [routerLink]="">Estadisticas</a></li>
+            <li><a (click)="this.as.cerrarSesion()">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+<!-- QUIEN SOY -->
+    <div class="section full-height first-button">
+        <input class="modal-btn" type="checkbox" id="modal-btn" name="modal-btn"/>
+        <label for="modal-btn">Datos personales<i class="uil uil-expand-arrows"></i></label> 		
+        <div class="modal">		
+            <div class="modal-wrap">	
+                <img src="https://assets.codepen.io/1462889/sl3.jpg" alt="">	
+                <p>Morena Escudero</p>	          		
+                <p>Alumna de Labo IV buscando recibirse presenta esta sala de jueguitos, programando desde 2022 ya no quiere saber más nada.</p>	          		
+            </div>			          		
+        </div>	
+    </div>
+
+    <div class="section full-height">
+        <input class="modal-btn-game" type="checkbox" id="modal-btn-game" name="modal-btn-game"/>
+        <label for="modal-btn-game">Explicación del juego<i class="uil uil-expand-arrows"></i></label> 		
+        <div class="modal">		
+            <div class="modal-wrap">	
+                <!-- <img src="https://assets.codepen.io/1462889/sl3.jpg" alt="">	  -->
+                <p>El juego todavía no sé qué es je</p>	          		
+            </div>			          		
+        </div>	
+    </div>
+
+</body>
