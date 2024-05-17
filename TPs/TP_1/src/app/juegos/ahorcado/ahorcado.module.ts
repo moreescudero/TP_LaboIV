@@ -6,14 +6,14 @@ import { AhorcadoRoutingModule } from './ahorcado-routing.module';
 
 @NgModule({
   declarations: [
-    AhorcadoComponent
+    //AhorcadoComponent
   ],
   imports: [
     CommonModule,
     AhorcadoRoutingModule
   ],
   exports: [
-    AhorcadoComponent
+    //AhorcadoComponent
   ],
   providers: [
   ],

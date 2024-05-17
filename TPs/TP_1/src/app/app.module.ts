@@ -19,6 +19,10 @@ import { FirestoreService } from 'src/services/firestore.service';
 import { AhorcadoComponent } from './juegos/ahorcado/ahorcado.component';
 import { MayorOMenorComponent } from './juegos/mayor-o-menor/mayor-o-menor.component';
 
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +41,9 @@ import { MayorOMenorComponent } from './juegos/mayor-o-menor/mayor-o-menor.compo
     AngularFirestoreModule,
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     // provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
   ],
   providers: [FirestoreService],
   bootstrap: [AppComponent]
