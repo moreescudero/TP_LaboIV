@@ -1,0 +1,11 @@
+<input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+<label for="menu-icon"></label>
+<nav class="nav"> 		
+    <ul class="pt-5">
+        <li *ngIf="mostrarHome"><a [routerLink]="['/home']">Home</a></li>
+        <li *ngIf="mostrarQuienSoy"><a [routerLink]="['/quien-soy']">¿Quién soy?</a></li>
+        <li *ngIf="mostrarEstadisticas"><a [routerLink]="">Estadisticas</a></li>
+        <li *ngIf="mostrarChat"><a [routerLink]="['/chat']">Chat</a></li>
+        <li><a (click)="this.as.cerrarSesion()">Cerrar Sesión</a></li>
+    </ul>
+</nav>

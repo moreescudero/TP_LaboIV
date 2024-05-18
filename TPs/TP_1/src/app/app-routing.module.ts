@@ -7,10 +7,12 @@ import { QuienSoyComponent } from './quien-soy/quien-soy.component';
 
 import { AhorcadoComponent } from './juegos/ahorcado/ahorcado.component';
 import { MayorOMenorComponent } from './juegos/mayor-o-menor/mayor-o-menor.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
+  { path: 'chat', component: ChatComponent},
   { path: 'login', component: LoginComponent},
   { path: 'quien-soy', component: QuienSoyComponent},
   { path: 'juegos/ahorcado', component: AhorcadoComponent},

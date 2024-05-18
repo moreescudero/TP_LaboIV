@@ -1,0 +1,41 @@
+<app-menu [mostrarChat]="false"></app-menu>
+
+<div class="container">
+    <div class="row chat-window col-md-12" id="chat_window_1" style="margin-left:10px;">
+        <div class="col-xs-12 col-md-12">
+        	<div class="panel panel-default">
+
+                <div class="panel-body msg_container_base" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+                    <div *ngFor="let item of mensajes">
+                        <div class="row msg_container base_sent" *ngIf='this.as.log.email === item.user'>
+                            <div class="col-md-10 col-xs-10">
+                                <div class="messages msg_sent">
+                                    <h6>{{item.usuario}}</h6>
+                                    <p>{{item.mensaje}}</p>
+                                    <time>{{item.fecha}}</time>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf='this.as.log.email !== item.user'>
+                            <div class="row msg_container base_receive">
+                                <div class="col-md-10 col-xs-10">
+                                    <div class="messages msg_receive">
+                                        <h6>{{item.usuario}}</h6>
+                                        <p>{{item.mensaje}}</p>
+                                        <time>{{item.fecha}}</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+<div class="panel-footer">
+    <div class="input-group">
+        <input id="btn-input" type="text" class="form-control input-sm chat_input"  [(ngModel)]="this.mensaje.mensaje" placeholder="Ingrese su mensaje" />
+        <div>
+            <button class="fa-play fs-4 ms-2 mt-2" style=" cursor: pointer;" (click)="enviarMensaje()">Enviar</button>
+        </div>
+    </div>
+</div>

@@ -5,15 +5,9 @@ import { MayorOMenorComponent } from './mayor-o-menor.component';
 import { MayorOMenorRoutingModule } from './mayor-o-menor-routing.module';
 
 @NgModule({
-  declarations: [
-    MayorOMenorComponent
-  ],
   imports: [
     CommonModule,
     MayorOMenorRoutingModule
-  ],
-  exports: [
-    MayorOMenorComponent
   ],
   providers: [
   ],

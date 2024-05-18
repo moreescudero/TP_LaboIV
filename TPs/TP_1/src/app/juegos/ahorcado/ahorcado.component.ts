@@ -11,16 +11,13 @@ import { FirestoreService } from 'src/services/firestore.service';
 export class AhorcadoComponent implements OnInit, AfterViewInit {
 
   palabrasAhorcado: string[] = [
-    'elefante',
-    'computadora',
-    'bicicleta',
-    'guitarra',
-    'helado',
-    'playa',
-    'carpincho',
-    'jirafa',
-    'zapato',
-    'durazno'
+    'elefante','computadora','bicicleta','guitarra',
+    'helado','playa','carpincho','jirafa',
+    'zapato','durazno','hamburguesa','laboratorio',
+    'montaña','naranja','lampara','avestruz', 
+    'burrito', 'camello', 'dinosaurio', 'escarabajo', 
+    'fotografía', 'gaviota', 'helicóptero', 'invierno', 
+    'jardinería','kiwi', 'leopardo', 'mariposa'
   ];
   palabra: string = "";
   palabraJuego: string = "";
@@ -104,7 +101,7 @@ export class AhorcadoComponent implements OnInit, AfterViewInit {
     si el usuario llegó a 6 aciertos pierde el juego 
   */
   perder() {
-    this.toastr.error("alcanzaste el número máximo de erroes. puntaje: 0", "perdiste :(");
+    this.toastr.error("alcanzaste el número máximo de errores. puntaje: 0", "perdiste :(");
     setTimeout(() => {
       this.enviarDatos(0);
     }, 2200);
@@ -144,6 +141,7 @@ export class AhorcadoComponent implements OnInit, AfterViewInit {
     this.palabra = "";
     this.palabraJuego = "";
     this.inicializarPalabra();
+    this.ngAfterViewInit();
   }
   
 }

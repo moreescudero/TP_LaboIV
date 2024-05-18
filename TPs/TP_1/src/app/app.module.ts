@@ -21,6 +21,9 @@ import { MayorOMenorComponent } from './juegos/mayor-o-menor/mayor-o-menor.compo
 
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { MenuComponent } from './menu/menu.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 @NgModule({
@@ -30,7 +33,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     QuienSoyComponent,
     AhorcadoComponent,
-    MayorOMenorComponent
+    MayorOMenorComponent,
+    MenuComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +49,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     provideFirestore(() => getFirestore()),
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [FirestoreService],
   bootstrap: [AppComponent]
